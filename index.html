@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAN Parents - Email Confirmed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0A0A12;
+      --card: #12121F;
+      --border: #2A2A3E;
+      --green: #39FF14;
+      --pink: #FF2D95;
+      --text: #E8E8F0;
+      --dim: #8888A0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text);
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      width: 100%;
+      max-width: 440px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .wordmark {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 22px;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .wordmark .lan { color: var(--green); }
+    .wordmark .parents { color: var(--pink); }
+    .tagline {
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: var(--dim);
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+    .check {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: rgba(57, 255, 20, 0.12);
+      border: 3px solid var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .check svg { width: 44px; height: 44px; }
+    h1 {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--green);
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .hint {
+      font-size: 16px;
+      color: var(--dim);
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .footer {
+      margin-top: 32px;
+      font-size: 13px;
+      color: var(--dim);
+    }
+    .footer a { color: var(--green); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="wordmark"><span class="lan">LAN</span><span class="parents">PARENTS</span></div>
+    <div class="tagline">Gaming Community for Moms &amp; Dads</div>
+
+    <div class="check">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 13l4 4L19 7" stroke="#39FF14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <h1>You're Confirmed!</h1>
+    <p>Your email has been verified and your account is now active.</p>
+    <p class="hint">You can close this tab, open the LAN Parents app, and sign in to get started.</p>
+
+    <div class="footer">
+      Questions? <a href="mailto:LANParents@outlook.com">LANParents@outlook.com</a><br/>
+      © 2026 LAN Parents. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
