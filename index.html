@@ -105,14 +105,24 @@
       </svg>
     </div>
 
-    <h1>You're Confirmed!</h1>
-    <p>Your email has been verified and your account is now active.</p>
-    <p class="hint">You can close this tab, open the LAN Parents app, and sign in to get started.</p>
+    <h1 id="title">You're Confirmed!</h1>
+    <p id="body">Your email has been verified and your account is now active.</p>
+    <p class="hint" id="hint">You can close this tab, open the LAN Parents app, and sign in to get started.</p>
 
     <div class="footer">
       Questions? <a href="mailto:LANParents@outlook.com">LANParents@outlook.com</a><br/>
       © 2026 LAN Parents. All rights reserved.
     </div>
   </div>
+<script>
+  var params = new URLSearchParams(window.location.search);
+  var hash = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+  var type = params.get('type') || hash.get('type');
+  if (type === 'email_change') {
+    document.getElementById('title').textContent = 'Email Updated!';
+    document.getElementById('body').textContent = 'Your new email address is confirmed. Use it the next time you sign in to LAN Parents.';
+    document.getElementById('hint').textContent = 'You can close this tab and head back to the LAN Parents app.';
+  }
+</script>
 </body>
 </html>
