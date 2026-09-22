@@ -123,6 +123,21 @@
     document.getElementById('body').textContent = 'Your new email address is confirmed. Use it the next time you sign in to LAN Parents.';
     document.getElementById('hint').textContent = 'You can close this tab and head back to the LAN Parents app.';
   }
+  // Supabase sends people here even when the link failed (for example, an
+  // expired link), with the reason in the address. Never show "confirmed" then.
+  var err = params.get('error') || hash.get('error');
+  var errCode = params.get('error_code') || hash.get('error_code');
+  if (err || errCode) {
+    var expired = errCode === 'otp_expired';
+    document.getElementById('title').textContent = expired ? 'Link Expired' : 'Link Not Valid';
+    document.getElementById('body').textContent = expired
+      ? 'This confirmation link has expired, so your email is not confirmed yet.'
+      : 'This link could not be used. It may have been used already, or copied incorrectly.';
+    document.getElementById('hint').textContent =
+      'Already confirmed? Just sign in to the app. Otherwise, email LANParents@outlook.com and we will send you a new confirmation link.';
+    var mark = document.querySelector('.check svg path');
+    if (mark) { mark.setAttribute('d', 'M6 6l12 12M18 6L6 18'); mark.setAttribute('stroke', '#FF2D95'); }
+  }
 </script>
 </body>
 </html>
