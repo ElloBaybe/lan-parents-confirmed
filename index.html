@@ -137,6 +137,10 @@
       'Already confirmed? Just sign in to the app. Otherwise, email LANParents@outlook.com and we will send you a new confirmation link.';
     var mark = document.querySelector('.check svg path');
     if (mark) { mark.setAttribute('d', 'M6 6l12 12M18 6L6 18'); mark.setAttribute('stroke', '#FF2D95'); }
+    // errorPink: the ring and title switch from success green to the error color.
+    var ring = document.querySelector('.check');
+    if (ring) { ring.style.borderColor = '#FF2D95'; ring.style.boxShadow = 'none'; }
+    document.getElementById('title').style.color = '#FF2D95';
   }
 </script>
 </body>
